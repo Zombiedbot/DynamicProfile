@@ -1,5 +1,6 @@
 import pygame
 import time
+import algo
 
 class Sign:
     def __init__(self, x, y):
@@ -82,9 +83,10 @@ def menuShow(screen, bg):
         pygame.display.update()
         #time.sleep(0.005)
     if but2:
-        return inpt(screen, bg)
+        m, n = inpt(screen, bg)
+        algo.main(n, m, screen)
     elif but1:
-        return (2, 2)
+        algo.main(2, 2, screen)
 
 def inpt(screen, bg):
     font = pygame.font.SysFont("comicsansms", 40)
